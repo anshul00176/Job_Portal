@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import colors from "colors";
 
 const connectDB= async ()=>{ 
   try {
@@ -7,7 +6,7 @@ const connectDB= async ()=>{
     console.log("database connected successfully");
   } 
   catch (error) {
-  console.log("error aagya bhai",error).bgred.white;  
+  console.log("error aagya bhai",error);  
   }
 }
 
