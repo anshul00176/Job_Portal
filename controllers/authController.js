@@ -2,8 +2,7 @@ import userModel from "../models/userModel.js";
 
 const authController=async(req,res)=>{ 
     try{ 
-    const {name,email,password}= req.body; 
-    console.log(email);
+    const {name,email,password}= req.body;  
     if(!name){ 
        return  res.status(200).send({ 
             message:"Name is required", 
