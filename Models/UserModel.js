@@ -7,10 +7,6 @@ const userSchema=new mongoose.Schema({
     type:String,
     required:[true,"Name is Required"]
   }, 
-  lastname:{ 
-    type:String,
-    required:[true,"Last Name is Required"]
-  }, 
   email:{ 
     type:String, 
     required:[true,"Email is required"], 
@@ -23,11 +19,10 @@ const userSchema=new mongoose.Schema({
   }, 
   location:{ 
     type:String, 
-    default:Mumbai
-  }. 
-  {timeStamp:true}
-}) 
+    default:"Mumbai"
+  }
+},  
+  { timestamps: true }
+);
 
-const User = mongoose.model('User',userSchema);
-
-export default User;
+export default mongoose.model("User", userSchema);
